@@ -1,0 +1,49 @@
+/*
+Jeff R Kersey
+PHP 241
+Program 1
+*/
+
+<!DOCTYPE html>
+<html lang="en"><title>Pizza Order!</title>
+<head><meta charset="utf-8" />
+<style>.container{margin-left: 20px;}</style>
+</head><body>
+
+<h1>Pizza Order Form</h1>
+
+<form method='post' action='pizza_order.php'>
+
+<p><input type='text' name='name' placeholder='enter your name' size="20"> Name</p>
+<p><input type='text' name='address' placeholder='enter your address' size="45"> Address</p>
+<p><input type='password' name='password' placeholder='enter your password' size="20"> Password </p>
+<p><input type="hidden" name="rush" value="rush order"></p>
+<p>
+<select name="size">
+   <option value="10">10 in. $6</option>
+   <option value="14">14 in. $10 </option>
+   <option value="18">18 in. $14 </option>
+</select></p>
+<div class="container">
+<p>
+<h3>Select a topping $1 each.</h3>
+<input type="checkbox" name="toppings[]" value="pepperoni" multiple> pepperoni<br>
+<input type="checkbox" name = "toppings[]" value = "mushrooms" multiple> mushrooms<br>
+<input type="checkbox" name = "toppings[]" value = "olives" multiple> olives<br>
+<input type="checkbox" name = "toppings[]" value = "sausage" multiple> sausage
+</p>
+<p>
+<input type="radio" name="radio" value = "0" checked> Pickup, no extra charge <br>
+<input type="radio" name="radio" value="5"> Delivery, add $5</p>
+<p>
+</div>
+<textarea name="textarea" rows="8" cols="80"></textarea> Extra info we may need
+</p>
+<hr>
+<p>
+<input type='submit' name="submit" value='submit'>  <input type='reset' value='Reset Form'>
+</form>
+
+</p>
+</body>
+</html>
